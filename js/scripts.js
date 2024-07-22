@@ -11,25 +11,61 @@ step
 
 const createGrid = document.getElementById('btn-grid-create');
 const grid = document.getElementById('grid-container');
+
 const choiceGrid = document.getElementById('select-choice');
 console.log (choiceGrid);
 
+
+let j;
 createGrid.addEventListener('click',
     function (){
         
-        for (let i = 0; i < 100; i++){
-        let cell = document.createElement('div');
-        cell.innerHTML += (i + 1);
-        grid.append(cell);
-        console.log(cell);
+        if(choiceGrid.selectedIndex == 0){
+
+           for (let i = 0; i < 100; i++){
+            let cell = document.createElement('div');
+            cell.innerHTML += (i + 1);
+            grid.append(cell);
+            console.log(cell);
         
-        } 
+        }  
+        }
         
+        else if(choiceGrid.selectedIndex == 1){
+
+            for (let i = 0; i < 81; i++){
+             let cell = document.createElement('div');
+             cell.innerHTML += (i + 1);
+             grid.append(cell);
+             console.log(cell);
+         
+         }  
+         }
+         
         
-        
+         
+         else if(choiceGrid.selectedIndex == 2){
+
+            for (let i = 0; i < 49; i++){
+             let cell = document.createElement('div');
+             cell.innerHTML += (i + 1);
+             grid.append(cell);
+             console.log(cell);
+         
+         }  
+         }
+         
     }
       
-        
+       
 );
 
- 
+
+function toggleClasse(x) {
+    
+    if (elemento.classList.contains('x')) {
+        elemento.classList.remove('x');
+    } else {
+        elemento.classList.add('x');
+    }
+};
