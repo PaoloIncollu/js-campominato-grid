@@ -39,7 +39,8 @@
 
     display: flex;
     flex-wrap: wrap;
-    width: 80%;
+    width: 800px;
+    height: 800px;
     margin: 0 auto;
     
     
@@ -47,13 +48,28 @@
 
 #grid-container > div{
 
-    width: calc(100% / 10);
+    display: flex;
     background-color: blue;
     border: 1px solid aquamarine;
     text-align: center;
-    padding: 50px;
+    justify-content: center;
+    align-items: center;
+    
 }
 
+.grid-10{
+    width:calc(100% / 10);
+}
+
+.grid-9{
+
+    width: calc(100% / 9);
+}
+
+.grid-7{
+
+    width: calc(100% / 7);
+}
 .coral{
 
 background-color:lightcoral;

@@ -15,8 +15,6 @@ const grid = document.getElementById('grid-container');
 const choiceGrid = document.getElementById('select-choice');
 console.log (choiceGrid);
 
-
-let j;
 createGrid.addEventListener('click',
     function (){
         
@@ -24,10 +22,11 @@ createGrid.addEventListener('click',
 
            for (let i = 0; i < 100; i++){
             let cell = document.createElement('div');
+            cell.classList.add('grid-10', 'col');
             cell.innerHTML += (i + 1);
             grid.append(cell);
             console.log(cell);
-        
+            
         }  
         }
         
@@ -35,10 +34,11 @@ createGrid.addEventListener('click',
 
             for (let i = 0; i < 81; i++){
              let cell = document.createElement('div');
+             cell.classList.add('grid-9', 'col');
              cell.innerHTML += (i + 1);
              grid.append(cell);
              console.log(cell);
-         
+             
          }  
          }
          
@@ -48,24 +48,34 @@ createGrid.addEventListener('click',
 
             for (let i = 0; i < 49; i++){
              let cell = document.createElement('div');
+             cell.classList.add('grid-7', 'col');
              cell.innerHTML += (i + 1);
              grid.append(cell);
              console.log(cell);
-         
-         }  
+            
+         } 
          }
          
     }
       
-       
+    
+
 );
 
 
-function toggleClasse(x) {
+   let newCell = document.querySelector('.col');
+
+    newCell.addEventListener('click',
+        function () {
     
-    if (elemento.classList.contains('x')) {
-        elemento.classList.remove('x');
-    } else {
-        elemento.classList.add('x');
+    if (newCell.classList.contains('coral')) {
+
+        newCell.classList.remove('coral');
+
     }
-};
+        
+    
+    else {
+        newCell.classList.add('coral');
+    }
+    });
