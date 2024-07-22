@@ -11,22 +11,25 @@ step
 
 const createGrid = document.getElementById('btn-grid-create');
 const grid = document.getElementById('grid-container');
+const choiceGrid = document.getElementById('select-choice');
+console.log (choiceGrid);
+
 createGrid.addEventListener('click',
     function (){
         
-       
         for (let i = 0; i < 100; i++){
-        
         let cell = document.createElement('div');
-        cell.innerHTML = (i + 1);
+        cell.innerHTML += (i + 1);
         grid.append(cell);
         console.log(cell);
-        }
-
         
-}
+        } 
         
+        
+        
+    }
+      
         
 );
 
-
+ 
