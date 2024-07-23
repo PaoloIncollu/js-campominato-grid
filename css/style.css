@@ -30,7 +30,7 @@
     margin-top: 10vh;
     padding: 50px 0;
     background-color: aquamarine;
-
+    overflow-y: auto;
 }
 
 
@@ -49,26 +49,28 @@
 #grid-container > div{
 
     display: flex;
-    background-color: blue;
-    border: 1px solid aquamarine;
+    border: 1px solid white;
     text-align: center;
     justify-content: center;
     align-items: center;
     
 }
 
-.grid-10{
+.grid-100{
     width:calc(100% / 10);
+    height: 80px;
 }
 
-.grid-9{
+.grid-81{
 
     width: calc(100% / 9);
+    height: calc(100% / 9);
 }
 
-.grid-7{
+.grid-49{
 
     width: calc(100% / 7);
+    height: calc(100% / 7);
 }
 .coral{
 

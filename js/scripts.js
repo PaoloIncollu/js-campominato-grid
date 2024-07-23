@@ -17,15 +17,54 @@ console.log (choiceGrid);
 
 createGrid.addEventListener('click',
     function (){
-        
+        grid.innerHTML = '';
+        let cellsNumber = 0;
         if(choiceGrid.selectedIndex == 0){
+            cellsNumber = 100;
+        }
+        else if (choiceGrid.selectedIndex == 1) {
+            cellsNumber= 81;
+        }
+        else if (choiceGrid.selectedIndex == 2){
+
+            cellsNumber = 49;
+        }
+
+        for (let i = 0; i < cellsNumber; i++){
+            const cell = document.createElement('div');
+            cell.classList.add('grid-' + cellsNumber, 'col');
+            cell.innerHTML += (i + 1);
+            console.log(cell);
+            grid.append(cell);
+            cell.addEventListener('click',
+            function(){
+
+                cell.classList.toggle('coral');
+                console.log(cell.innerText);
+            }
+        );
+        } 
+            
+        
+    }
+    
+);
+      
+    /*if(choiceGrid.selectedIndex == 0){
 
            for (let i = 0; i < 100; i++){
-            let cell = document.createElement('div');
+            const cell = document.createElement('div');
             cell.classList.add('grid-10', 'col');
             cell.innerHTML += (i + 1);
-            grid.append(cell);
+            
             console.log(cell);
+            this.addEventListener('clicked',
+                function(){
+
+                    this.classList.add('coral');
+                }
+             );
+            grid.append(cell);
             
         }  
         }
@@ -33,12 +72,18 @@ createGrid.addEventListener('click',
         else if(choiceGrid.selectedIndex == 1){
 
             for (let i = 0; i < 81; i++){
-             let cell = document.createElement('div');
+             const cell = document.createElement('div');
              cell.classList.add('grid-9', 'col');
              cell.innerHTML += (i + 1);
-             grid.append(cell);
-             console.log(cell);
              
+             console.log(cell);
+             this.addEventListener('clicked',
+                function(){
+
+                    this.classList.add('coral');
+                }
+             );
+            grid.append(cell);
          }  
          }
          
@@ -47,35 +92,26 @@ createGrid.addEventListener('click',
          else if(choiceGrid.selectedIndex == 2){
 
             for (let i = 0; i < 49; i++){
-             let cell = document.createElement('div');
+             const cell = document.createElement('div');
              cell.classList.add('grid-7', 'col');
              cell.innerHTML += (i + 1);
-             grid.append(cell);
+             
              console.log(cell);
-            
+             this.addEventListener('clicked',
+                function(){
+
+                    this.classList.add('coral');
+                }
+             );
+            grid.append(cell);
          } 
          }
          
-    }
-      
-    
 
-);
+    */
 
 
-   let newCell = document.querySelector('.col');
 
-    newCell.addEventListener('click',
-        function () {
-    
-    if (newCell.classList.contains('coral')) {
 
-        newCell.classList.remove('coral');
 
-    }
-        
-    
-    else {
-        newCell.classList.add('coral');
-    }
-    });
+   
